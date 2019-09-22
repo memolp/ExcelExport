@@ -208,9 +208,9 @@ def CloseExcel(workbook):
     """ """
     pass
 
-workbook = OpenExcel(u"配置表.xlsx")
-# s = ExcelSheetParser(workbook.sheets()[2],"./")
-# s.Export()
-for sheet in workbook.sheets():
-   s = ExcelSheetParser(sheet,"./")
-   s.Export()
+# workbook = OpenExcel(u"配置表.xlsx")
+# # s = ExcelSheetParser(workbook.sheets()[2],"./")
+# # s.Export()
+# for sheet in workbook.sheets():
+#    s = ExcelSheetParser(sheet,"./")
+#    s.Export()

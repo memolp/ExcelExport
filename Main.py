@@ -2,9 +2,8 @@
 
 import os,sys
 
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
 
 import ConfigParser
 
@@ -61,8 +60,8 @@ class QMainWindow(QWidget):
 
     def onSelectConfigPath(self,event):
         """ """
-        fname = QFileDialog.getOpenFileName(self,"选择Excel",".","Excel(*.xlsx , *.xls)")
-        if fname[0] == '': #沒有选择文件
+        fname = QFileDialog.getOpenFileName(self,"选择Excel",".","Excel(*.xlsx);;Excel(*.xls);;All(*.*)")
+        if not fname or  fname[0] == '': #沒有选择文件
             return 
         excel_file = fname[0]
         if not excel_file.endswith(".xls") and not excel_file.endswith("xlsx"): 
